@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  duplex-merge:
+    build: .
+    container_name: duplex-merge
+    volumes:
+      - /mnt/hdd/paperless/Import-Duplex:/app/import-doppelseitig
+      - /mnt/hdd/paperless/Import:/app/import
+    restart: unless-stopped
